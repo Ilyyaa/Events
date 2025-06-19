@@ -1,13 +1,13 @@
 package com.example.consumer.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
+
 @Entity
-public class Order {
+public class Purchase {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,9 +15,9 @@ public class Order {
     private Integer amount;
     private Integer productId;
 
-    public Order() {}
+    public Purchase() {}
 
-    public Order(Integer orderId, Integer amount, Integer productId) {
+    public Purchase(Integer orderId, Integer amount, Integer productId) {
         this.orderId = orderId;
         this.amount = amount;
         this.productId = productId;

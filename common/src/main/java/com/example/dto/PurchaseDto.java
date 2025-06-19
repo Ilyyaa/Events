@@ -1,25 +1,18 @@
-package com.example.consumer.dto;
+package com.example.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
-public class OrderDto {
+public class PurchaseDto {
 
-    private Integer orderId;
     private Integer amount;
     private Integer productId;
 
-    public OrderDto() {}
+    public PurchaseDto() {}
 
-    public OrderDto(Integer orderId, Integer amount, Integer productId) {
-        this.orderId = orderId;
+    public PurchaseDto(Integer orderId, Integer amount, Integer productId) {
         this.amount = amount;
         this.productId = productId;
-    }
-
-    @JsonProperty
-    public Integer getOrderId() {
-        return orderId;
     }
 
     @JsonProperty
@@ -30,10 +23,6 @@ public class OrderDto {
     @JsonProperty
     public Integer getProductId() {
         return productId;
-    }
-
-    public void setOrderId(Integer orderId) {
-        this.orderId = orderId;
     }
 
     public void setAmount(Integer amount) {
